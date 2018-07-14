@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="500"
-   height="803"
-   viewBox="0 0 500 803.00002"
+   width="425.14288"
+   height="409.42856"
+   viewBox="0 0 425.14288 409.42857"
    id="launchpad-svg"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -32,225 +32,241 @@
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker8632"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path8634" />
+         d="M 0,5.65 0,-5.65"
+         id="path8634"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker8238"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path8240" />
+         d="M 0,5.65 0,-5.65"
+         id="path8240"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker8140"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path8142" />
+         d="M 0,5.65 0,-5.65"
+         id="path8142"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker8046"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path8048" />
+         d="M 0,5.65 0,-5.65"
+         id="path8048"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker7956"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path7958" />
+         d="M 0,5.65 0,-5.65"
+         id="path7958"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker7870"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path7872" />
+         d="M 0,5.65 0,-5.65"
+         id="path7872"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker7788"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path7790" />
+         d="M 0,5.65 0,-5.65"
+         id="path7790"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker7710"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path7712" />
+         d="M 0,5.65 0,-5.65"
+         id="path7712"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker7636"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path7638" />
+         d="M 0,5.65 0,-5.65"
+         id="path7638"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker4741"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path4743" />
+         d="M 0,5.65 0,-5.65"
+         id="path4743"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="StopL"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker4721"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path4723"
-         d="M 0.0,5.65 L 0.0,-5.65"
+         d="M 0,5.65 0,-5.65"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1"
-         transform="scale(0.8)" />
+         transform="scale(0.8,0.8)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker4715"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="DotM">
       <path
-         transform="scale(0.4) translate(7.4, 1)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
-         id="path4717" />
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path4717"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker4705"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="DotM">
       <path
-         transform="scale(0.4) translate(7.4, 1)"
-         style="fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1;fill:#9c9c9c;fill-opacity:1"
-         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
-         id="path4707" />
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         style="fill:#9c9c9c;fill-opacity:1;fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path4707"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
        id="marker4701"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="StopL">
       <path
-         transform="scale(0.8)"
+         transform="scale(0.8,0.8)"
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#9c9c9c;stroke-width:1pt;stroke-opacity:1"
-         d="M 0.0,5.65 L 0.0,-5.65"
-         id="path4703" />
+         d="M 0,5.65 0,-5.65"
+         id="path4703"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path4419"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.4) rotate(180) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Lend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path4413"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
     </marker>
   </defs>
   <sodipodi:namedview
@@ -266,17 +282,21 @@
      inkscape:window-height="949"
      id="namedview4718"
      showgrid="false"
-     inkscape:zoom="1.8487805"
-     inkscape:cx="61.581853"
-     inkscape:cy="239.49643"
+     inkscape:zoom="0.92439025"
+     inkscape:cx="-68.993344"
+     inkscape:cy="180.49646"
      inkscape:window-x="9"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="launchpad-svg" />
+     inkscape:current-layer="launchpad-svg"
+     fit-margin-top="9"
+     fit-margin-left="9"
+     fit-margin-right="9"
+     fit-margin-bottom="9" />
   <rect
      ry="16.929501"
-     y="346.07147"
-     x="48.5"
+     y="11.5"
+     x="11.5"
      height="386.42856"
      width="402.14288"
      id="launchpad-frame"
@@ -288,25 +308,25 @@
      id="launchpad-cc-104"
      class="launchpad-control"
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 86.14287,364.35626 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37895,0 -16.92951,-7.55056 -16.92951,-16.9295 0,-9.37894 7.55056,-16.9295 16.92951,-16.9295 z m 0,11.51091 c -0.56906,0 -6.32799,9.97474 -6.04346,10.46757 0.28453,0.49282 11.80238,0.49282 12.08691,0 0.28453,-0.49283 -5.47439,-10.46757 -6.04345,-10.46757 z"
+     d="m 49.14287,29.784788 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37895,0 -16.92951,-7.55056 -16.92951,-16.9295 0,-9.37894 7.55056,-16.9295 16.92951,-16.9295 z m 0,11.51091 c -0.56906,0 -6.32799,9.97474 -6.04346,10.46757 0.28453,0.49282 11.80238,0.49282 12.08691,0 0.28453,-0.49283 -5.47439,-10.46757 -6.04345,-10.46757 z"
      inkscape:connector-curvature="0" />
   <path
      id="launchpad-cc-105"
      class="launchpad-control"
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 127.14279,364.35626 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37894,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55056,-16.9295 16.9295,-16.9295 z m 0,22.34809 c -0.56906,0 -6.32799,-9.97474 -6.04346,-10.46757 0.28453,-0.49282 11.80238,-0.49282 12.08691,0 0.28453,0.49283 -5.47439,10.46757 -6.04345,10.46757 z"
+     d="m 90.14279,29.784788 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37894,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55056,-16.9295 16.9295,-16.9295 z m 0,22.34809 c -0.56906,0 -6.32799,-9.97474 -6.04346,-10.46757 0.28453,-0.49282 11.80238,-0.49282 12.08691,0 0.28453,0.49283 -5.47439,10.46757 -6.04345,10.46757 z"
      inkscape:connector-curvature="0" />
   <path
      id="launchpad-cc-106"
      class="launchpad-control"
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 168.14279,364.35626 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37894,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55056,-16.9295 16.9295,-16.9295 z m -5.41859,16.9295 c 0,0.56906 9.97475,6.32799 10.46757,6.04346 0.49282,-0.28453 0.49282,-11.80238 0,-12.08691 -0.49282,-0.28453 -10.46757,5.47439 -10.46757,6.04345 z"
+     d="m 131.14279,29.784788 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37894,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55056,-16.9295 16.9295,-16.9295 z m -5.41859,16.9295 c 0,0.56906 9.97475,6.32799 10.46757,6.04346 0.49282,-0.28453 0.49282,-11.80238 0,-12.08691 -0.49282,-0.28453 -10.46757,5.47439 -10.46757,6.04345 z"
      inkscape:connector-curvature="0" />
   <path
      id="launchpad-cc-107"
      class="launchpad-control"
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 209.14273,364.35626 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37895,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55055,-16.9295 16.9295,-16.9295 z m 5.4186,16.9295 c 0,0.56906 -9.97475,6.32799 -10.46757,6.04346 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.47439 10.46757,6.04345 z"
+     d="m 172.14273,29.784788 c 9.37894,0 16.9295,7.55056 16.9295,16.9295 0,9.37894 -7.55056,16.9295 -16.9295,16.9295 -9.37895,0 -16.9295,-7.55056 -16.9295,-16.9295 0,-9.37894 7.55055,-16.9295 16.9295,-16.9295 z m 5.4186,16.9295 c 0,0.56906 -9.97475,6.32799 -10.46757,6.04346 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.47439 10.46757,6.04345 z"
      inkscape:connector-curvature="0" />
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -314,16 +334,16 @@
      class="launchpad-control"
      width="33.859005"
      height="33.859005"
-     x="233.64551"
-     y="364.35626"
+     x="196.64551"
+     y="29.78479"
      ry="16.929502">
     <title
        id="title4835">Launchpad CC 108</title>
   </rect>
   <rect
      ry="16.929502"
-     y="364.35626"
-     x="274.64545"
+     y="29.78479"
+     x="237.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-cc-109"
@@ -334,8 +354,8 @@
   </rect>
   <rect
      ry="16.929502"
-     y="364.35626"
-     x="315.64545"
+     y="29.78479"
+     x="278.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-cc-110"
@@ -350,8 +370,8 @@
      class="launchpad-control"
      width="33.859005"
      height="33.859005"
-     x="356.64539"
-     y="364.35626"
+     x="319.64539"
+     y="29.78479"
      ry="16.929502">
     <title
        id="title4844">Launchpad CC 111</title>
@@ -362,16 +382,16 @@
      width="33.859005"
      height="33.859005"
      class="launchpad-note"
-     x="69.213364"
-     y="404.35626"
+     x="32.213364"
+     y="69.78479"
      ry="8.553854">
     <title
        id="title4847">Launchpad Note 0</title>
   </rect>
   <rect
      ry="8.553854"
-     y="404.35626"
-     x="110.21329"
+     y="69.78479"
+     x="73.213287"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-1"
@@ -382,8 +402,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="404.35626"
-     x="151.21329"
+     y="69.78479"
+     x="114.21329"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-2"
@@ -398,16 +418,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="192.21323"
-     y="404.35626"
+     x="155.21323"
+     y="69.78479"
      ry="8.553854">
     <title
        id="title4856">Launchpad Note 3</title>
   </rect>
   <rect
      ry="8.553854"
-     y="404.35626"
-     x="233.64551"
+     y="69.78479"
+     x="196.64551"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-4"
@@ -422,8 +442,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="274.64545"
-     y="404.35626"
+     x="237.64545"
+     y="69.78479"
      ry="8.553854">
     <title
        id="title4862">Launchpad Note 5</title>
@@ -434,16 +454,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="315.64545"
-     y="404.35626"
+     x="278.64545"
+     y="69.78479"
      ry="8.553854">
     <title
        id="title4865">Launchpad Note 6</title>
   </rect>
   <rect
      ry="8.553854"
-     y="404.35626"
-     x="356.64539"
+     y="69.78479"
+     x="319.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-7"
@@ -459,16 +479,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="396.64539"
-     y="404.35626"
+     x="359.64539"
+     y="69.78479"
      ry="16.929502">
     <title
        id="title4871">Launchpad Note 8</title>
   </rect>
   <rect
      ry="8.553854"
-     y="444.35626"
-     x="69.213364"
+     y="109.78479"
+     x="32.213364"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-16"
@@ -483,8 +503,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="110.21329"
-     y="444.35626"
+     x="73.213287"
+     y="109.78479"
      ry="8.553854">
     <title
        id="title4877">Launchpad Note 17</title>
@@ -495,16 +515,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="151.21329"
-     y="444.35626"
+     x="114.21329"
+     y="109.78479"
      ry="8.553854">
     <title
        id="title4880">Launchpad Note 18</title>
   </rect>
   <rect
      ry="8.553854"
-     y="444.35626"
-     x="192.21323"
+     y="109.78479"
+     x="155.21323"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-19"
@@ -519,16 +539,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="233.64551"
-     y="444.35626"
+     x="196.64551"
+     y="109.78479"
      ry="8.553854">
     <title
        id="title4886">Launchpad Note 20</title>
   </rect>
   <rect
      ry="8.553854"
-     y="444.35626"
-     x="274.64545"
+     y="109.78479"
+     x="237.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-21"
@@ -539,8 +559,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="444.35626"
-     x="315.64545"
+     y="109.78479"
+     x="278.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-22"
@@ -555,8 +575,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="356.64539"
-     y="444.35626"
+     x="319.64539"
+     y="109.78479"
      ry="8.553854">
     <title
        id="title4895">Launchpad Note 23</title>
@@ -564,8 +584,8 @@
   <rect
      rx="16.929502"
      ry="16.929502"
-     y="444.35626"
-     x="396.64539"
+     y="109.78479"
+     x="359.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-24"
@@ -576,8 +596,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="484.35626"
-     x="69.213364"
+     y="149.78479"
+     x="32.213364"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-32"
@@ -592,8 +612,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="110.21329"
-     y="484.35626"
+     x="73.213287"
+     y="149.78479"
      ry="8.553854">
     <title
        id="title4904">Launchpad Note 33</title>
@@ -604,16 +624,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="151.21329"
-     y="484.35626"
+     x="114.21329"
+     y="149.78479"
      ry="8.553854">
     <title
        id="title4907">Launchpad Note 34</title>
   </rect>
   <rect
      ry="8.553854"
-     y="484.35626"
-     x="192.21323"
+     y="149.78479"
+     x="155.21323"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-35"
@@ -628,16 +648,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="233.64551"
-     y="484.35626"
+     x="196.64551"
+     y="149.78479"
      ry="8.553854">
     <title
        id="title4913">Launchpad Note 36</title>
   </rect>
   <rect
      ry="8.553854"
-     y="484.35626"
-     x="274.64545"
+     y="149.78479"
+     x="237.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-37"
@@ -648,8 +668,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="484.35626"
-     x="315.64545"
+     y="149.78479"
+     x="278.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-38"
@@ -664,8 +684,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="356.64539"
-     y="484.35626"
+     x="319.64539"
+     y="149.78479"
      ry="8.553854">
     <title
        id="title4922">Launchpad Note 39</title>
@@ -673,8 +693,8 @@
   <rect
      rx="16.929502"
      ry="16.929502"
-     y="484.35626"
-     x="396.64539"
+     y="149.78479"
+     x="359.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-40"
@@ -689,16 +709,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="69.213364"
-     y="524.35626"
+     x="32.213364"
+     y="189.78479"
      ry="8.553854">
     <title
        id="title4928">Launchpad Note 48</title>
   </rect>
   <rect
      ry="8.553854"
-     y="524.35626"
-     x="110.21329"
+     y="189.78479"
+     x="73.213287"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-49"
@@ -709,8 +729,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="524.35626"
-     x="151.21329"
+     y="189.78479"
+     x="114.21329"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-50"
@@ -725,16 +745,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="192.21323"
-     y="524.35626"
+     x="155.21323"
+     y="189.78479"
      ry="8.553854">
     <title
        id="title4937">Launchpad Note 51</title>
   </rect>
   <rect
      ry="8.553854"
-     y="524.35626"
-     x="233.64551"
+     y="189.78479"
+     x="196.64551"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-52"
@@ -749,8 +769,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="274.64545"
-     y="524.35626"
+     x="237.64545"
+     y="189.78479"
      ry="8.553854">
     <title
        id="title4943">Launchpad Note 53</title>
@@ -761,16 +781,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="315.64545"
-     y="524.35626"
+     x="278.64545"
+     y="189.78479"
      ry="8.553854">
     <title
        id="title4946">Launchpad Note 54</title>
   </rect>
   <rect
      ry="8.553854"
-     y="524.35626"
-     x="356.64539"
+     y="189.78479"
+     x="319.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-55"
@@ -786,16 +806,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="396.64539"
-     y="524.35626"
+     x="359.64539"
+     y="189.78479"
      ry="16.929502">
     <title
        id="title4952">Launchpad Note 56</title>
   </rect>
   <rect
      ry="8.553854"
-     y="564.35626"
-     x="69.213364"
+     y="229.78479"
+     x="32.213364"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-64"
@@ -810,8 +830,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="110.21329"
-     y="564.35626"
+     x="73.213287"
+     y="229.78479"
      ry="8.553854">
     <title
        id="title4958">Launchpad Note 65</title>
@@ -822,16 +842,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="151.21329"
-     y="564.35626"
+     x="114.21329"
+     y="229.78479"
      ry="8.553854">
     <title
        id="title4961">Launchpad Note 66</title>
   </rect>
   <rect
      ry="8.553854"
-     y="564.35626"
-     x="192.21323"
+     y="229.78479"
+     x="155.21323"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-67"
@@ -846,16 +866,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="233.64551"
-     y="564.35626"
+     x="196.64551"
+     y="229.78479"
      ry="8.553854">
     <title
        id="title4967">Launchpad Note 68</title>
   </rect>
   <rect
      ry="8.553854"
-     y="564.35626"
-     x="274.64545"
+     y="229.78479"
+     x="237.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-69"
@@ -866,8 +886,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="564.35626"
-     x="315.64545"
+     y="229.78479"
+     x="278.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-70"
@@ -882,8 +902,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="356.64539"
-     y="564.35626"
+     x="319.64539"
+     y="229.78479"
      ry="8.553854">
     <title
        id="title4976">Launchpad Note 71</title>
@@ -891,8 +911,8 @@
   <rect
      rx="16.929502"
      ry="16.929502"
-     y="564.35626"
-     x="396.64539"
+     y="229.78479"
+     x="359.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-72"
@@ -907,16 +927,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="69.213364"
-     y="604.35626"
+     x="32.213364"
+     y="269.78479"
      ry="8.553854">
     <title
        id="title4982">Launchpad Note 80</title>
   </rect>
   <rect
      ry="8.553854"
-     y="604.35626"
-     x="110.21329"
+     y="269.78479"
+     x="73.213287"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-81"
@@ -927,8 +947,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="604.35626"
-     x="151.21329"
+     y="269.78479"
+     x="114.21329"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-82"
@@ -943,16 +963,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="192.21323"
-     y="604.35626"
+     x="155.21323"
+     y="269.78479"
      ry="8.553854">
     <title
        id="title4991">Launchpad Note 83</title>
   </rect>
   <rect
      ry="8.553854"
-     y="604.35626"
-     x="233.64551"
+     y="269.78479"
+     x="196.64551"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-84"
@@ -967,8 +987,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="274.64545"
-     y="604.35626"
+     x="237.64545"
+     y="269.78479"
      ry="8.553854">
     <title
        id="title4997">Launchpad Note 85</title>
@@ -979,16 +999,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="315.64545"
-     y="604.35626"
+     x="278.64545"
+     y="269.78479"
      ry="8.553854">
     <title
        id="title5000">Launchpad Note 86</title>
   </rect>
   <rect
      ry="8.553854"
-     y="604.35626"
-     x="356.64539"
+     y="269.78479"
+     x="319.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-87"
@@ -1004,8 +1024,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="396.64539"
-     y="604.35626"
+     x="359.64539"
+     y="269.78479"
      ry="16.929502">
     <title
        id="title5006">Launchpad Note 88</title>
@@ -1016,16 +1036,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="69.213364"
-     y="644.35626"
+     x="32.213364"
+     y="309.78479"
      ry="8.553854">
     <title
        id="title4241">Launchpad Note 96</title>
   </rect>
   <rect
      ry="8.553854"
-     y="644.35626"
-     x="110.21329"
+     y="309.78479"
+     x="73.213287"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-97"
@@ -1036,8 +1056,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="644.35626"
-     x="151.21329"
+     y="309.78479"
+     x="114.21329"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-98"
@@ -1052,16 +1072,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="192.21323"
-     y="644.35626"
+     x="155.21323"
+     y="309.78479"
      ry="8.553854">
     <title
        id="title5017">Launchpad Note 99</title>
   </rect>
   <rect
      ry="8.553854"
-     y="644.35626"
-     x="233.64551"
+     y="309.78479"
+     x="196.64551"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-100"
@@ -1076,8 +1096,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="274.64545"
-     y="644.35626"
+     x="237.64545"
+     y="309.78479"
      ry="8.553854">
     <title
        id="title5023">Launchpad Note 101</title>
@@ -1088,16 +1108,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="315.64545"
-     y="644.35626"
+     x="278.64545"
+     y="309.78479"
      ry="8.553854">
     <title
        id="title5026">Launchpad Note 102</title>
   </rect>
   <rect
      ry="8.553854"
-     y="644.35626"
-     x="356.64539"
+     y="309.78479"
+     x="319.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-103"
@@ -1113,16 +1133,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="396.64539"
-     y="644.35626"
+     x="359.64539"
+     y="309.78479"
      ry="16.929502">
     <title
        id="title5032">Launchpad Note 104</title>
   </rect>
   <rect
      ry="8.553854"
-     y="684.35626"
-     x="69.213364"
+     y="349.78479"
+     x="32.213364"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-112"
@@ -1137,8 +1157,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="110.21329"
-     y="684.35626"
+     x="73.213287"
+     y="349.78479"
      ry="8.553854">
     <title
        id="title4225">Launchpad Note 113</title>
@@ -1149,16 +1169,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="151.21329"
-     y="684.35626"
+     x="114.21329"
+     y="349.78479"
      ry="8.553854">
     <title
        id="title4227">Launchpad Note 114</title>
   </rect>
   <rect
      ry="8.553854"
-     y="684.35626"
-     x="192.21323"
+     y="349.78479"
+     x="155.21323"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-115"
@@ -1173,16 +1193,16 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="233.64551"
-     y="684.35626"
+     x="196.64551"
+     y="349.78479"
      ry="8.553854">
     <title
        id="title4231">Launchpad Note 116</title>
   </rect>
   <rect
      ry="8.553854"
-     y="684.35626"
-     x="274.64545"
+     y="349.78479"
+     x="237.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-117"
@@ -1193,8 +1213,8 @@
   </rect>
   <rect
      ry="8.553854"
-     y="684.35626"
-     x="315.64545"
+     y="349.78479"
+     x="278.64545"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-118"
@@ -1209,8 +1229,8 @@
      class="launchpad-note"
      width="33.859005"
      height="33.859005"
-     x="356.64539"
-     y="684.35626"
+     x="319.64539"
+     y="349.78479"
      ry="8.553854">
     <title
        id="title4237">Launchpad Note 119</title>
@@ -1218,8 +1238,8 @@
   <rect
      rx="16.929502"
      ry="16.929502"
-     y="684.35626"
-     x="396.64539"
+     y="349.78479"
+     x="359.64539"
      height="33.859005"
      width="33.859005"
      id="launchpad-note-120"
@@ -1229,115 +1249,115 @@
        id="title4239">Launchpad Note 120</title>
   </rect>
   <path
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path5598"
-     d="m 418.99349,421.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.47439 10.46757,6.04346 z"
+     d="m 381.99349,86.714298 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.47439 10.46757,6.04346 z"
      inkscape:connector-curvature="0" />
   <path
-     d="m 418.99349,461.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,126.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      id="path5925"
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      inkscape:connector-curvature="0" />
   <path
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path5927"
-     d="m 418.99349,501.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,166.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      inkscape:connector-curvature="0" />
   <path
-     d="m 418.99349,541.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,206.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      id="path5929"
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      inkscape:connector-curvature="0" />
   <path
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path5931"
-     d="m 418.99349,581.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,246.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      inkscape:connector-curvature="0" />
   <path
-     d="m 418.99349,621.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,286.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      id="path5933"
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      inkscape:connector-curvature="0" />
   <path
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path5935"
-     d="m 418.99349,661.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,326.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      inkscape:connector-curvature="0" />
   <path
-     d="m 418.99349,701.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
+     d="m 381.99349,366.7143 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z"
      id="path5937"
-     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:"
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16299999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      inkscape:connector-curvature="0" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="75.57402"
-     y="706.74597"
+     x="38.57402"
+     y="372.1745"
      id="text9124"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="75.57402"
-       y="706.74597"
+       x="38.57402"
+       y="372.1745"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
        id="tspan9160">C2</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text9128"
-     y="586.74597"
-     x="75.654587"
+     y="252.1745"
+     x="38.654587"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
-       y="586.74597"
-       x="75.654587"
+       y="252.1745"
+       x="38.654587"
        id="tspan9130"
        sodipodi:role="line">C4</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="75.581345"
-     y="466.74597"
+     x="38.581345"
+     y="132.1745"
      id="text9132"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="75.581345"
-       y="466.74597"
+       x="38.581345"
+       y="132.1745"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
        id="tspan9136">C6</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="240.08673"
-     y="666.74597"
+     x="203.08673"
+     y="332.1745"
      id="text9140"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="240.08673"
-       y="666.74597"
+       x="203.08673"
+       y="332.1745"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
        id="tspan9144">C3</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text9148"
-     y="546.74597"
-     x="239.83405"
+     y="212.1745"
+     x="202.83405"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
        id="tspan9150"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
-       y="546.74597"
-       x="239.83405"
+       y="212.1745"
+       x="202.83405"
        sodipodi:role="line">C5</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="239.89264"
-     y="426.74597"
+     x="202.89264"
+     y="92.1745"
      id="text9152"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="239.89264"
-       y="426.74597"
+       x="202.89264"
+       y="92.1745"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Sans;-inkscape-font-specification:'Sans Bold'"
        id="tspan9164">C7</tspan></text>
 </svg>
