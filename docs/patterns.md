@@ -49,7 +49,7 @@ by one step at a time.  The up and down arrows change the length of the pattern 
 
 ### Changing the Notes Sent for a Step
 
-![Step Note Mode](../src/images/step-note-mode.svg))
+![Step Note Mode](../src/images/step-note-mode.svg)
 
 By default, each new active step contains a single note, which is set to C2.  You can control which notes are sent for
 each step using the step note mode, which is accessed using the second circular button from the right on top of the UI.
