@@ -18,7 +18,8 @@ The Flockquencer:
 4. Supports up to 64 steps per sequence.
 5. Supports multiple notes per step.  You can use this for simple chording or octaves, or send any combination of up to
    112 notes per step.
-6. Provides independent control over the MIDI channels use for live playing and sequencers.  It can send messages on
+6. Supports tying notes between steps, so that you can use both multi-step notes and single-step notes.
+7. Provides independent control over the MIDI channels use for live playing and sequencers.  It can send messages on
    nine channels simultaneously, send all messages on the same channel, or any combination.
 
 ## Requirements

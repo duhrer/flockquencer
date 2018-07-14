@@ -22,12 +22,42 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs4720">
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker11606"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11608"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#1f00fb;fill-opacity:1;fill-rule:evenodd;stroke:#1f00fb;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="StopL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker11404"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11406"
+         d="M 0,5.65 0,-5.65"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#1f00fb;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8,0.8)" />
+    </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -140,7 +170,8 @@
        refX="0"
        refY="0"
        orient="auto"
-       inkscape:stockid="DotM">
+       inkscape:stockid="DotM"
+       inkscape:collect="always">
       <path
          transform="matrix(0.4,0,0,0.4,2.96,0.4)"
          style="fill:#1f00fb;fill-opacity:1;fill-rule:evenodd;stroke:#1f00fb;stroke-width:1pt;stroke-opacity:1"
@@ -516,13 +547,13 @@
      inkscape:window-height="940"
      id="namedview4718"
      showgrid="false"
-     inkscape:zoom="1.8487805"
-     inkscape:cx="250.95467"
-     inkscape:cy="402.5254"
+     inkscape:zoom="1.3072852"
+     inkscape:cx="157.37947"
+     inkscape:cy="315.98186"
      inkscape:window-x="0"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g13418" />
+     inkscape:current-layer="launchpad-svg" />
   <path
      inkscape:connector-curvature="0"
      id="path5265"
@@ -744,7 +775,7 @@
        sodipodi:role="line"
        id="tspan12240"
        x="58.135746"
-       y="99.204826"></tspan></text>
+       y="99.204826" /></text>
   <g
      id="g13418"
      style="stroke:#000000;stroke-opacity:0.42180094">
@@ -1323,7 +1354,7 @@
        width="33.859005"
        class="launchpad-note"
        id="launchpad-note-68"
-       style="opacity:1;fill:#43ff12;fill-opacity:0.58823532;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.42180094">
+       style="opacity:1;fill:#fffe12;fill-opacity:0.58823532;fill-rule:evenodd;stroke:#000000;stroke-width:2.14099455;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.42180094">
       <title
          id="title4967">Launchpad Note 68</title>
     </rect>
@@ -1744,4 +1775,20 @@
        id="path5937"
        d="m 508.99349,533.28577 c 0,0.56906 -9.97475,6.32798 -10.46757,6.04345 -0.49282,-0.28453 -0.49282,-11.80238 0,-12.08691 0.49282,-0.28453 10.46757,5.4744 10.46757,6.04346 z" />
   </g>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#1f00fb;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker11404);marker-end:url(#marker11606)"
+     d="m 340.61222,572.73495 0,-159.14221"
+     id="path11216"
+     inkscape:connector-curvature="0" />
+  <text
+     sodipodi:linespacing="125%"
+     id="text12750"
+     y="591.61743"
+     x="394.43912"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       id="tspan12754"
+       y="591.61743"
+       x="394.43912"
+       sodipodi:role="line">Apeggiation Root</tspan></text>
 </svg>

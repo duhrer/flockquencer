@@ -7,15 +7,16 @@ step pattern running at 60 BPM will be repeated 5 times in a minute.
 ## Steps
 
 Each step defines the notes which are to be played or not played a particular point in a pattern.  A step may have no
-notes (silence) or play up to 112 notes.  Each step may be independent or chained to the previous step.
+notes (silence) or play up to 112 notes.  Each step may be independent or tied to the previous step.
 
 Independent steps play all of their notes at the beginning of the step, and silence all of their notes at the beginning
 of the next step.
 
-Chained steps leave any notes they had in common with the previous step playing, stop playing any notes from the
+Tied steps leave any notes they had in common with the previous step playing, stop playing any notes from the
 previous step that are not part of the current step, and start playing any steps that were added in the current step.
-If the first step in a pattern is chained, that means that it continues playing any notes it has in common with the
-last step of the pattern.
+If the first step in a pattern is tied, that means that it continues playing any notes it has in common with the
+last step of the pattern.  A single step pattern can be tied to itself to play a note continuously (for example when
+creating arpeggiation patterns).
 
 ## Creating a Pattern of Steps
 
@@ -35,7 +36,7 @@ To add an independent step, simply press an unlit square pad within the pattern.
 
 To add a chained step, hold down on an unlit square pad within the pattern until it is lit up in orange.
 
-To clear an independent or chained step, press it and release quickly.
+To clear an independent or tied step, press it and release quickly.
 
 To convert an active (lit) step from an independent step to a chained step (or vice versa), hold down on the pad until
 the lighting changes.
@@ -58,11 +59,11 @@ This button is lit when you are in step note editing mode.
 As in step editing mode (see above), the rightmost column of circular buttons is used to select which pattern you are
 editing.  The button that corresponds to the selected pattern is lit.
 
-In general, notes that are to be played are highlighted in green, and unplayed notes are unlit.  A note lit in red or
-brown represents the position of the step you are editing within the pattern.  If the note is brown, it is unplayed.  If
-the note is played, it is red.
+Notes that are to be played are highlighted in green, and unplayed notes are unlit.  The note that represents the
+position of the step you are editing within the pattern blinks.  If the note blinks orange, it is unplayed.  Otherwise
+it will blink green (for an active note) or yellow (for the root of an arpeggiation pattern, see below).
 
-Touch an unlit or brown note to add it to the step.  Touch a note lit in red or green to remove it from the step.
+Touch an unlit note to add it to the step.  Touch a lit note to remove it from the step.
 
 You can change which step you are editing using the left and right arrows atop the UI.  You can scroll up or down two
 octaves using the up and down arrows atop the UI.  As you change octaves, the display will update to indicate your
@@ -75,10 +76,10 @@ the grid of square pads, regardless of the octave you are working with.
 
 ## Arpeggiation Patterns
 
-When defining a pattern for use with arpeggiation, keep in mind that the lowest note of the first active step will be
+When defining a pattern for use with arpeggiation, by default the lowest note of the first active step will be
 mapped to the played note, and all other notes will be played relative to that note.
 
-So, for example, if you want to play a major chord, you might define a pattern with a single chained step (see above),
+So, for example, if you want to play a major chord, you might define a pattern with a single tied step (see above),
 whose notes are C2, E2, and G2.  If you use this pattern to arpeggiate and touch G1, the pattern will be shifted from
 being relative to C2 to being relative to G1.  The notes G1, B1, and D2 would play until you released the G1 key.
 
@@ -87,6 +88,9 @@ two step pattern.  The first step contains C0 (the lowest note possible to enter
 of the highest notes possible to enter).  If you use this pattern to arpeggiate and play a C9 on the keyboard, the first
 step will play a C9, and the second step will play a C18.  By inverting the pattern (first step C9, second step C0,
 playing note C0), it's possible to play notes as low as C-9.
+
+You can also long-press a note within a step to indicate that this note should be the relative starting point for
+arpeggiation.  When selected, the relative starting point is highlighted in yellow.
 
 ## Using Patterns
 
