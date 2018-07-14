@@ -68,7 +68,7 @@ You can change which step you are editing using the left and right arrows atop t
 octaves using the up and down arrows atop the UI.  As you change octaves, the display will update to indicate your
 octave offset:
 
-![Octave Offset](../src/images/octave-controls.md)
+![Octave Offset](../src/images/octave-controls.svg)
 
 Note that the position of the "cursor" that indicates your active step is always relative to the upper-left corner of
 the grid of square pads, regardless of the octave you are working with.
