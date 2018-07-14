@@ -75,14 +75,18 @@ the grid of square pads, regardless of the octave you are working with.
 
 ## Arpeggiation Patterns
 
-When defining a pattern for use with arpeggiation, keep in mind that the first note of the first active step will be
-mapped to the played note, and all other notes will be played relative to that note.  This increases the overall range
-of possible notes.
+When defining a pattern for use with arpeggiation, keep in mind that the lowest note of the first active step will be
+mapped to the played note, and all other notes will be played relative to that note.
 
-Let's say, for example, that you have created a two step pattern.  The first step contains C0 (the lowest note possible
-to enter) and the second step contains C9 (one of the highest notes possible to enter).  If you use this pattern to
-arpeggiate and play a C9 on the keyboard, the first step will play a C9, and the second step will play a C18.  By
-inverting the pattern (first step C9, second step C0, playing note C0), it's possible to play notes as low as C-9.
+So, for example, if you want to play a major chord, you might define a pattern with a single chained step (see above),
+whose notes are C2, E2, and G2.  If you use this pattern to arpeggiate and touch G1, the pattern will be shifted from
+being relative to C2 to being relative to G1.  The notes G1, B1, and D2 would play until you released the G1 key.
+
+This relative mapping increases the overall range of possible notes.  Let's say, for example, that you have created a
+two step pattern.  The first step contains C0 (the lowest note possible to enter) and the second step contains C9 (one
+of the highest notes possible to enter).  If you use this pattern to arpeggiate and play a C9 on the keyboard, the first
+step will play a C9, and the second step will play a C18.  By inverting the pattern (first step C9, second step C0,
+playing note C0), it's possible to play notes as low as C-9.
 
 ## Using Patterns
 
