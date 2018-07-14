@@ -3,8 +3,8 @@
 ![The Flockquencer](./src/images/flockquencer.svg)
 
 The Flockquencer is a browser-based MIDI controller and sequencer. It is designed to be used in combination with a
-Novation Launchpad (MK 1), but can also be used independently with only a browser and a sound-producing instrument that
-accepts MIDI messages as input.
+Novation Launchpad (MK 1), but can also be used independently with only a browser and software or hardware that accepts
+MIDI messages as input.
 
 ## Features
 
@@ -42,7 +42,7 @@ using options menu (the gear icon).  See the ["MIDI Connections" documentation](
 For more details about all features of the Flockquencer, check out any of the following:
 
 * [Performance Mode](docs/performance-mode.md)
-* [Entering Patterns](docs/patterns.md).
+* [Entering Patterns](docs/patterns.md)
 * [MIDI Channel Controls](docs/midi-channels.md)
 
 ## Credits
