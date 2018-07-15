@@ -35,5 +35,14 @@ To start using a defined pattern as an arpeggiation pattern, hold down the corre
 button is highlighted in orange, its pattern is currently being used for arpeggiation.  To stop using a pattern for
 arpeggiation touch the corresponding lit orange button and release.
 
-The tempo (BPM) of both sequences and arpeggiation is controlled using the left and right arrows.  The tempo is not
-displayed on a connected launchpad, but is displayed onscreen.
+## Tempo (BPM) Controls
+
+The tempo (BPM) of both sequences and arpeggiation is controlled using the left and right arrows.  Pressing and
+releasing the left arrow quickly will decrease the tempo by 1 BPM.  If you hold in one direction for more than two
+seconds, the tempo will change more quickly.
+
+While either the left or right arrow is depressed, the current tempo will be displayed as shown below:
+
+![BPM Display](../src/images/bpm-display.svg)
+
+The Flockquencer defaults to 120 BPM.  You can change the tempo to any value from 1 BPM up to and including 999 BPM.
