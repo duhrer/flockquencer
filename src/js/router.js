@@ -60,6 +60,13 @@
                 options: {
                     portType: "input",
                     components: {
+                        midiPortSelector: {
+                            options: {
+                                strings: {
+                                    selectBoxLabel: "Note Input",
+                                }
+                            }
+                        },
                         connection: {
                             options: {
                                 listeners: {
@@ -109,7 +116,16 @@
                 type: "flock.ui.midiConnector",
                 container: "{that}.dom.controlOutput",
                 options: {
-                    portType: "output"
+                    portType: "output",
+                    components: {
+                        midiPortSelector: {
+                            options: {
+                                strings: {
+                                    selectBoxLabel: "Note Output",
+                                }
+                            }
+                        }
+                    }
                 }
             },
             uiOutput: {
@@ -118,6 +134,13 @@
                 options: {
                     portType: "output",
                     components: {
+                        midiPortSelector: {
+                            options: {
+                                strings: {
+                                    selectBoxLabel: "UI Output",
+                                }
+                            }
+                        },
                         connection: {
                             options: {
                                 listeners: {
