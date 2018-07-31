@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>"Tied Steps" Sequence Test</title>
+
+    <script src="../node_modules/infusion/dist/infusion-all.js"></script>
+
+    <!-- Flocking dependencies -->
+    <script src="../node_modules/flocking/dist/flocking-all.js"></script>
+    <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/midi-router.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/ui/browser-router.js"></script>
+
+    <!-- Bergson dependencies -->
+    <script src="../node_modules/bergson/dist/bergson-only.js"></script>
+
+    <script src="../src/js/connector.js"></script>
+    <script src="../src/js/sequence.js"></script>
+    <script src="../src/js/sequence-player.js"></script>
+
+    <!-- Test Harness and sample data. -->
+    <script src="./js/sequence-player-harness.js"></script>
+</head>
+<body>
+    <p>Connect this to an output and start the sequence to hear a guitar-like chord.</p>
+
+    <div class="sequence-player">
+        <div class="control-output"></div>
+        <button class="stop-button">Stop</button>
+        <button class="start-button">Start</button>
+        <p>bpm: <input type="text" class="bpm" value="120"></p>
+    </div>
+
+    <script type="text/javascript">
+        var harness = flockquencer.demo.sequencePlayer(".sequence-player", {
+            components: {
+                sequencerPlayer: {
+                    options: {
+                        components: {
+                            guitarChord: {
+                                type: "flockquencer.sequence",
+                                options: {
+                                    members: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 8,
+                                        steps: {
+                                            0: {
+                                                notes: [50]
+                                            },
+                                            1: {
+                                                tied: true,
+                                                notes: [50, 57]
+                                            },
+                                            2: {
+                                                tied: true,
+                                                notes: [50, 57, 62]
+                                            },
+                                            3: {
+                                                tied: true,
+                                                notes: [50, 57, 62, 65]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>"Tail Lights" Sequence Test</title>
+
+    <script src="../node_modules/infusion/dist/infusion-all.js"></script>
+
+    <!-- Flocking dependencies -->
+    <script src="../node_modules/flocking/dist/flocking-all.js"></script>
+    <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/midi-router.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/ui/browser-router.js"></script>
+
+    <!-- Bergson dependencies -->
+    <script src="../node_modules/bergson/dist/bergson-only.js"></script>
+
+    <script src="../src/js/connector.js"></script>
+    <script src="../src/js/sequence.js"></script>
+    <script src="../src/js/sequence-player.js"></script>
+
+    <!-- Test Harness and sample data. -->
+    <script src="./js/sequence-player-harness.js"></script>
+</head>
+<body>
+    <p>Connect this to an output and start the sequence to hear a "tail light" scenario, a 3 and 4 note sequence moving
+    in and out of phase.</p>
+
+    <div class="sequence-player">
+        <div class="control-output"></div>
+        <button class="stop-button">Stop</button>
+        <button class="start-button">Start</button>
+        <input type="text" class="bpm" value="120">
+    </div>
+
+    <script type="text/javascript">
+        var harness = flockquencer.demo.sequencePlayer(".sequence-player", {
+            components: {
+                sequencerPlayer: {
+                    options: {
+                        components: {
+                            fourStep: {
+                                type: "flockquencer.sequence",
+                                options: {
+                                    members: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 4,
+                                        steps: {
+                                            0: {
+                                                notes: [50]
+                                            },
+                                            1: {
+                                                notes: [53]
+                                            },
+                                            2: {
+                                                notes: [56]
+                                            },
+                                            3: {
+                                                notes: [62]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            threeStep: {
+                                type: "flockquencer.sequence",
+                                options: {
+                                    members: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 3,
+                                        steps: {
+                                            0: {
+                                                notes: [38]
+                                            },
+                                            1: {
+                                                notes: [41]
+                                            },
+                                            2: {
+                                                notes: [44]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

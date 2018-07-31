@@ -11,6 +11,9 @@
                 var childComponentMode = fluid.get(childComponent, "options.mode");
                 if (childComponentMode === "*" || that.model.mode === childComponentMode) {
                     childComponent.events[event].fire(payload);
+                    //if (payload.type && payload.type !== event) {
+                    //    childComponent.events[payload.type].fire(payload);
+                    //}
                 }
             }
         }, { flat: true });
@@ -34,12 +37,12 @@
             }
         },
         distributeOptions: [
-            // Distribute the UI output (note painter) to all modes.
+            // Distribute the control output (note player) to all modes.
             {
                 record: "{flockquencer.router}.controlOutput",
                 target: "{that flockquencer.mode}.options.components.controlOutput"
             },
-            // Distribute the note output (note player) to all modes.
+            // Distribute the UI output (note painter) to all modes.
             {
                 record: "{flockquencer.router}.uiOutput",
                 target: "{that flockquencer.mode}.options.components.uiOutput"
@@ -48,7 +51,7 @@
             {
                 record: "{flockquencer.router}.controlInput",
                 target: "{that flockquencer.onscreen}.options.components.controlInput"
-            },
+            }
         ],
         components: {
             enviro: {
@@ -113,7 +116,7 @@
                 }
             },
             controlOutput: {
-                type: "flock.ui.midiConnector",
+                type: "flockquencer.connector",
                 container: "{that}.dom.controlOutput",
                 options: {
                     portType: "output",
@@ -129,10 +132,36 @@
                 }
             },
             uiOutput: {
-                type: "flock.ui.midiConnector",
+                type: "flockquencer.connector",
                 container: "{that}.dom.uiOutput",
                 options: {
                     portType: "output",
+                    listeners: {
+                        raw: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiRaw", "{arguments}.0"]
+                        },
+                        message: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiMessage", "{arguments}.0"]
+                        },
+                        note: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiNote", "{arguments}.0"]
+                        },
+                        noteOn: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiNoteOn", "{arguments}.0"]
+                        },
+                        noteOff: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiNoteOff", "{arguments}.0"]
+                        },
+                        control: {
+                            func: "{flockquencer.router}.distributeModalEvent",
+                            args: ["uiControl", "{arguments}.0"]
+                        }
+                    },
                     components: {
                         midiPortSelector: {
                             options: {
@@ -156,11 +185,13 @@
             },
             onscreen: {
                 type: "flockquencer.onscreen",
-                container: ".flockquencer-onscreen",
+                container: ".flockquencer-onscreen"
+            },
+            modeSelect: {
+                type: "flockquencer.mode.ui",
                 options: {
                     model: {
-                        octaveOffset: "{flockquencer.router}.model.octaveOffset",
-                        performanceChannel: "{flockquencer.router}.model.octaveOffset"
+                        mode: "{flockquencer.router}.model.mode"
                     }
                 }
             },
@@ -168,11 +199,12 @@
                 type: "flockquencer.mode.performance",
                 options: {
                     model: {
+                        mode: "{flockquencer.router}.model.mode",
                         octaveOffset: "{flockquencer.router}.model.octaveOffset",
                         performanceChannel: "{flockquencer.router}.model.octaveOffset"
                     }
                 }
             }
         }
-    })
+    });
 })(fluid);

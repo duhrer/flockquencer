@@ -3,7 +3,7 @@
     fluid.defaults("flockquencer.mode", {
         gradeNames: ["fluid.modelComponent"],
         events: {
-            // MIDI note events.
+            // MIDI input events.
             raw: null,
             message: null,
             note: null,
@@ -13,6 +13,15 @@
             program: null,
             aftertouch: null,
             pitchbend: null,
+
+            // UI output events
+            "uiRaw": null,
+            "uiMessage": null,
+            "uiNote": null,
+            "uiNoteOn": null,
+            "uiNoteOff": null,
+            "uiControl": null,
+
             // uiOutput Connection event
             onUiOutputReady: null
         }
