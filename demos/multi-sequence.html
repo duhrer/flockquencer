@@ -1,94 +1,98 @@
 <html>
-<head>
-    <title>Multi-Sequence Test</title>
+    <head>
+        <title>Multi-Sequence Test</title>
 
-    <script src="../node_modules/infusion/dist/infusion-all.js"></script>
+        <script src="../node_modules/infusion/dist/infusion-all.js"></script>
 
-    <!-- Flocking dependencies -->
-    <script src="../node_modules/flocking/dist/flocking-all.js"></script>
-    <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
-    <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
-    <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
-    <script src="../node_modules/flocking-midi-router/src/midi-router.js"></script>
-    <script src="../node_modules/flocking-midi-router/src/ui/browser-router.js"></script>
+        <!-- Flocking dependencies -->
+        <script src="../node_modules/flocking/dist/flocking-all.js"></script>
+        <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+        <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+        <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+        <script src="../node_modules/flocking-midi-router/src/midi-router.js"></script>
+        <script src="../node_modules/flocking-midi-router/src/ui/browser-router.js"></script>
 
-    <!-- Bergson dependencies -->
-    <script src="../node_modules/bergson/dist/bergson-only.js"></script>
+        <!-- Bergson dependencies -->
+        <script src="../node_modules/bergson/dist/bergson-only.js"></script>
 
-    <script src="../src/js/connector.js"></script>
-    <script src="../src/js/sequence.js"></script>
-    <script src="../src/js/sequence-player.js"></script>
+        <script src="../src/js/connector.js"></script>
+        <script src="../src/js/sequence.js"></script>
+        <script src="../src/js/sequence-player.js"></script>
 
-    <!-- Test Harness and sample data. -->
-    <script src="./js/sequence-player-harness.js"></script>
-</head>
-<body>
-    <p>Connect this to an output and start the sequence to hear a multi-sequence arrangement.</p>
+        <!-- Test Harness and sample data. -->
+        <script src="./js/sequence-player-harness.js"></script>
+    </head>
+    <body>
+        <p><a href="index.html">Demos</a> > Multi-Sequence </p>
 
-    <div class="sequence-player">
-        <div class="control-output"></div>
-        <button class="stop-button">Stop</button>
-        <button class="start-button">Start</button>
-        <p>bpm: <input type="text" class="bpm" value="120"></p>
-    </div>
+        <p>Connect this to an output and start the sequence to hear a multi-sequence arrangement that consists of
+            overlapping 1, 2, 3, and 4 note sequences playing simultaneously.</p>
 
-    <script type="text/javascript">
-        var harness = flockquencer.demo.sequencePlayer(".sequence-player", {
-            components: {
-                sequencerPlayer: {
-                    options: {
-                        components: {
-                            every: {
-                                type: "flockquencer.sequence",
-                                options: {
-                                    members: {
-                                        status: flockquencer.sequence.status.STOPPED,
-                                        length: 1,
-                                        steps: {
-                                            0: {
-                                                notes: [ 79 ]
+        <div class="sequence-player">
+            <div class="control-output"></div>
+            <button class="stop-button">Stop</button>
+            <button class="start-button">Start</button>
+            <p>bpm: <input type="text" class="bpm" value="120"></p>
+        </div>
+
+        <script type="text/javascript">
+            var harness = flockquencer.demo.sequencePlayer(".sequence-player", {
+                components: {
+                    sequencerPlayer: {
+                        options: {
+                            components: {
+                                every: {
+                                    type: "flockquencer.sequence",
+                                    options: {
+                                        members: {
+                                            status: flockquencer.sequence.status.STOPPED,
+                                            length: 1,
+                                            steps: {
+                                                0: {
+                                                    notes: [ 79 ]
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            },
-                            everyOther: {
-                                type: "flockquencer.sequence",
-                                options: {
-                                    members: {
-                                        status: flockquencer.sequence.status.STOPPED,
-                                        length: 2,
-                                        steps: {
-                                            0: {
-                                                notes: [ 67 ]
+                                },
+                                everyOther: {
+                                    type: "flockquencer.sequence",
+                                    options: {
+                                        members: {
+                                            status: flockquencer.sequence.status.STOPPED,
+                                            length: 2,
+                                            steps: {
+                                                0: {
+                                                    notes: [ 67 ]
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            },
-                            everyFourth: {
-                                type: "flockquencer.sequence",
-                                options: {
-                                    members: {
-                                        status: flockquencer.sequence.status.STOPPED,
-                                        length: 4,
-                                        steps: {
-                                            0: {
-                                                notes: [ 72 ]
+                                },
+                                everyFourth: {
+                                    type: "flockquencer.sequence",
+                                    options: {
+                                        members: {
+                                            status: flockquencer.sequence.status.STOPPED,
+                                            length: 4,
+                                            steps: {
+                                                0: {
+                                                    notes: [ 72 ]
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            },
-                            everyEight: {
-                                type: "flockquencer.sequence",
-                                options: {
-                                    members: {
-                                        status: flockquencer.sequence.status.STOPPED,
-                                        length: 8,
-                                        steps: {
-                                            0: {
-                                                notes: [ 75 ]
+                                },
+                                everyEight: {
+                                    type: "flockquencer.sequence",
+                                    options: {
+                                        members: {
+                                            status: flockquencer.sequence.status.STOPPED,
+                                            length: 8,
+                                            steps: {
+                                                0: {
+                                                    notes: [ 75 ]
+                                                }
                                             }
                                         }
                                     }
@@ -97,8 +101,7 @@
                         }
                     }
                 }
-            }
-        });
-    </script>
-</body>
+            });
+        </script>
+    </body>
 </html>

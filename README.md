@@ -34,6 +34,9 @@ connected to a Launchpad, the lights on the pads will match the onscreen display
 
 ## How do I use this?
 
+To launch the Flockquencer, open the `index.html` file in the root of the repository in a browser (Chrome or Opera at
+time of writing).
+
 By default, the Flockquencer starts in "performance mode".  The [performance mode docs](docs/performance-mode.md) are a
 good place to start learning about its features.
 
