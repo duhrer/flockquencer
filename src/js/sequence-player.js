@@ -35,9 +35,7 @@
     };
 
     flockquencer.sequence.player.processStep = function (that) {
-        // Get the list of sequences, iterate through them, processing their notes to be stopped and/or played.
-        var sequences = flockquencer.sequence.player.getSequences(that);
-        fluid.each(sequences, that.handleStepForSequence);
+        fluid.each(that.model.sequences, that.handleStepForSequence);
 
         // Process arpeggiations.
         fluid.each(that.arpeggiations, that.handleStepForArpeggiation);
@@ -160,16 +158,6 @@
         return results;
     };
 
-    flockquencer.sequence.player.getSequences = function (that) {
-        var sequences = [];
-        fluid.visitComponentChildren(that, function (childComponent, name) {
-            if (fluid.componentHasGrade(childComponent, "flockquencer.sequence")) {
-                sequences.push(childComponent);
-            }
-        }, { flat: true });
-        return sequences;
-    };
-
     fluid.defaults("flockquencer.sequence.player", {
         gradeNames: ["fluid.modelComponent"],
         defaultNote: 63,
@@ -178,7 +166,8 @@
         },
         model: {
             bpm: 120,
-            beat: 0
+            beat: 0,
+            sequences: {}
         },
         invokers: {
             start: {

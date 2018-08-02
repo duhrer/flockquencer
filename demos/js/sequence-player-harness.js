@@ -4,8 +4,7 @@
     fluid.registerNamespace("flockquencer.demo.sequencePlayer");
 
     flockquencer.demo.sequencePlayer.setAllSequenceStatuses = function (that, status) {
-        var sequences = flockquencer.sequence.player.getSequences(that);
-        fluid.each(sequences, function (sequence){
+        fluid.each(that.model.sequences, function (sequence){
             sequence.status = status;
         });
     };

@@ -23,7 +23,7 @@
         <script src="./js/sequence-player-harness.js"></script>
     </head>
     <body>
-        <p><a href="index.html">Demos</a> "Tied" steps</p>
+        <p><a href="index.html">Demos</a> > "Tied" steps</p>
 
         <p>Connect this to an output and start the sequence to hear a guitar-like chord constructed using "tied" steps,
             where common notes continue playing between steps.</p>
@@ -40,29 +40,26 @@
                 components: {
                     sequencerPlayer: {
                         options: {
-                            components: {
-                                guitarChord: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 8,
-                                            steps: {
-                                                0: {
-                                                    notes: [50]
-                                                },
-                                                1: {
-                                                    tied: true,
-                                                    notes: [50, 57]
-                                                },
-                                                2: {
-                                                    tied: true,
-                                                    notes: [50, 57, 62]
-                                                },
-                                                3: {
-                                                    tied: true,
-                                                    notes: [50, 57, 62, 65]
-                                                }
+                            model: {
+                                sequences: {
+                                    guitarChord: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 8,
+                                        steps: {
+                                            0: {
+                                                notes: [50]
+                                            },
+                                            1: {
+                                                tied: true,
+                                                notes: [50, 57]
+                                            },
+                                            2: {
+                                                tied: true,
+                                                notes: [50, 57, 62]
+                                            },
+                                            3: {
+                                                tied: true,
+                                                notes: [50, 57, 62, 65]
                                             }
                                         }
                                     }

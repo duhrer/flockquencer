@@ -40,59 +40,41 @@
                 components: {
                     sequencerPlayer: {
                         options: {
-                            components: {
-                                every: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 1,
-                                            steps: {
-                                                0: {
-                                                    notes: [ 79 ]
-                                                }
+                            model: {
+                                sequences: {
+                                    every: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 1,
+                                        steps: {
+                                            0: {
+                                                notes: [ 79 ]
                                             }
                                         }
-                                    }
-                                },
-                                everyOther: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 2,
-                                            steps: {
-                                                0: {
-                                                    notes: [ 67 ]
-                                                }
+                                    },
+                                    everyOther: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 2,
+                                        steps: {
+                                            0: {
+                                                notes: [ 67 ]
                                             }
                                         }
-                                    }
-                                },
-                                everyFourth: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 4,
-                                            steps: {
-                                                0: {
-                                                    notes: [ 72 ]
-                                                }
+                                    },
+                                    everyFourth: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 4,
+                                        steps: {
+                                            0: {
+                                                notes: [ 72 ]
                                             }
                                         }
-                                    }
-                                },
-                                everyEight: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 8,
-                                            steps: {
-                                                0: {
-                                                    notes: [ 75 ]
-                                                }
+                                    },
+                                    everyEight: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 8,
+                                        steps: {
+                                            0: {
+                                                notes: [ 75 ]
                                             }
                                         }
                                     }

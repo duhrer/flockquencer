@@ -40,46 +40,38 @@
                 components: {
                     sequencerPlayer: {
                         options: {
-                            components: {
-                                fourStep: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 4,
-                                            steps: {
-                                                0: {
-                                                    notes: [50]
-                                                },
-                                                1: {
-                                                    notes: [53]
-                                                },
-                                                2: {
-                                                    notes: [56]
-                                                },
-                                                3: {
-                                                    notes: [62]
-                                                }
+                            model: {
+                                sequences: {
+                                    fourStep: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 4,
+                                        steps: {
+                                            0: {
+                                                notes: [50]
+                                            },
+                                            1: {
+                                                notes: [53]
+                                            },
+                                            2: {
+                                                notes: [56]
+                                            },
+                                            3: {
+                                                notes: [62]
                                             }
                                         }
-                                    }
-                                },
-                                threeStep: {
-                                    type: "flockquencer.sequence",
-                                    options: {
-                                        members: {
-                                            status: flockquencer.sequence.status.STOPPED,
-                                            length: 3,
-                                            steps: {
-                                                0: {
-                                                    notes: [38]
-                                                },
-                                                1: {
-                                                    notes: [41]
-                                                },
-                                                2: {
-                                                    notes: [44]
-                                                }
+                                    },
+                                    threeStep: {
+                                        status: flockquencer.sequence.status.STOPPED,
+                                        length: 3,
+                                        steps: {
+                                            0: {
+                                                notes: [38]
+                                            },
+                                            1: {
+                                                notes: [41]
+                                            },
+                                            2: {
+                                                notes: [44]
                                             }
                                         }
                                     }
