@@ -22,15 +22,15 @@
         that.scheduler.start();
     };
 
-    flockquencer.sequence.player.pause = function (that) {
-        flockquencer.sequence.player.stopScheduler(that);
-    };
-
     flockquencer.sequence.player.stop = function (that) {
         flockquencer.sequence.player.stopScheduler(that);
     };
 
     flockquencer.sequence.player.stopScheduler = function (that) {
+        // Make sure any lingering arpeggiations don't start playing if we start up later.
+        that.stopAllArpeggiations();
+
+        // TODO: we may need to ensure that one last beat is fired to cleanup or otherwise silence any playing notes.
         that.scheduler.stop();
     };
 
@@ -158,6 +158,12 @@
         return results;
     };
 
+    flockquencer.sequence.player.stopAllArpeggiations = function (that) {
+        fluid.each(that.arpeggiations, function (sequence) {
+            sequence.status = flockquencer.sequence.status.STOPPING;
+        });
+    };
+
     fluid.defaults("flockquencer.sequence.player", {
         gradeNames: ["fluid.modelComponent"],
         defaultNote: 63,
@@ -174,12 +180,12 @@
                 funcName: "flockquencer.sequence.player.start",
                 args:     ["{that}"]
             },
-            pause: {
-                funcName: "flockquencer.sequence.player.pause",
-                args:     ["{that}"]
-            },
             stop: {
                 funcName: "flockquencer.sequence.player.stop",
+                args:     ["{that}"]
+            },
+            stopAllArpeggiations: {
+                funcName: "flockquencer.sequence.player.stopAllArpeggiations",
                 args:     ["{that}"]
             },
             processStep: {

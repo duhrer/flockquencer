@@ -87,8 +87,25 @@
         status: flockquencer.sequence.status.STOPPED
     };
 
+    flockquencer.sequence.newSequence = function () {
+        return fluid.copy(flockquencer.sequence.blankSequence);
+    };
+
     // An expander to merge partial sequence options with the defaults.
     flockquencer.sequence.mergeWithDefaults = function (sequenceOptions) {
         fluid.extend({}, flockquencer.sequence.blankSequence, sequenceOptions);
-    }
+    };
+
+    flockquencer.sequence.getRootNote = function (sequence) {
+        if (sequence.rootNote) {
+            return sequence.rootNote;
+        }
+        else if (sequence.steps) {
+            return fluid.find(sequence.steps, function (step) {
+                if (fluid.get(step, "notes.length")) {
+                    return step.notes[0];
+                }
+            });
+        }
+    };
 })(fluid);

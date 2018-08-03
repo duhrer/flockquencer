@@ -5,33 +5,102 @@
     fluid.registerNamespace("flockquencer.mode.performance");
 
     flockquencer.mode.performance.paintNote = function (that, notePayload) {
-        var inputHandlerDef = fluid.get(that.options.controlNotes, fluid.get(notePayload, "note"));
+        var isSequenceControl = fluid.get(that.options.sequenceControlNotes, fluid.get(notePayload, "note"));
         // Use the input def to handle the display of the note
-        if (inputHandlerDef) {
-            // TODO: do something.
-        }
-        // Just make the note "echo" on the device, i.e. flash when press, off when released.
-        else {
+        if (!isSequenceControl) {
+            // Just make the note "echo" on the device, i.e. light it up when pushed, turn it off when released.
             that.uiOutput.send(notePayload);
         }
     };
 
+    flockquencer.mode.performance.toggleSequence = function (that, notePayload) {
+        var sequence = that.model.sequences[notePayload.note];
+        if (notePayload.type === "noteOn" && notePayload.velocity !== 0) {
+            fluid.set(that.controlStartTiming, notePayload.note, Date.now());
+        }
+        else if (notePayload.type === "noteOff" || notePayload.velocity === 0) {
+            var pressDuration = Date.now() - fluid.get(that.controlStartTiming, notePayload.note);
+
+            // If it's already the selected arpeggiation, unselect it and turn it off.
+            if (that.selectedArpeggiation === notePayload.note) {
+                // Stop all playing arpeggiations.
+                that.sequencePlayer.stopAllArpeggiations();
+                that.selectedArpeggiation = false;
+            }
+            else {
+                // LONG press on something other than the current arpeggiation pattern, change the pattern.
+                if (pressDuration > that.options.longPressCutoff) {
+                    // Stop the sequence if it's playing.
+                    flockquencer.mode.performance.toggleSequenceStatus(sequence, true);
+                    that.selectedArpeggiation = notePayload.note;
+                }
+                // Short press
+                else {
+                    flockquencer.mode.performance.toggleSequenceStatus(sequence);
+                }
+            }
+
+            // Update the UI with any changes
+            that.paintRightColumn();
+        }
+    };
+
+    flockquencer.mode.performance.toggleSequenceStatus = function (sequence, stopOnly) {
+        switch(sequence.status) {
+            // Playing, flag it to be stopped.
+            case flockquencer.sequence.status.PLAYING:
+                sequence.status = flockquencer.sequence.status.STOPPING;
+                break;
+            // Didn't get the chance to start, just stop it outright.
+            case flockquencer.sequence.status.STARTING:
+                sequence.status = flockquencer.sequence.status.STOPPED;
+                break;
+            // Stopped, flag it to be started.
+            case flockquencer.sequence.status.STOPPED:
+                if (!stopOnly) {
+                    sequence.status = flockquencer.sequence.status.STARTING;
+                }
+                break;
+            // Didn't get the chance to stop, just keep playing.
+            case flockquencer.sequence.status.STOPPING:
+                if (!stopOnly) {
+                    sequence.status = flockquencer.sequence.status.PLAYING;
+                }
+                break;
+        }
+    };
 
     // TODO: BPM controls and display.  Sub-modes?  Other display buffer?
 
-    flockquencer.mode.performance.sendToControlOutput = function (that, payload) {
-        // TODO: Figure out how to handle the notes that are "play buttons" for sequences, i.e. 8, 24, 40, 56, 72, 88, 104, 120
-
-        var inputHandlerDef = fluid.get(that.options.controlNotes, fluid.get(payload, "note"));
-        // treat the note input as a control
-        if (inputHandlerDef) {
-            // TODO: Write this
+    flockquencer.mode.performance.handleNoteInput = function (that, notePayload) {
+        var isSequenceControl = fluid.get(that.options.sequenceControlNotes, fluid.get(notePayload, "note"));
+        if (isSequenceControl) {
+            flockquencer.mode.performance.toggleSequence(that, notePayload);
         }
-        // play the note
-        // TODO: Test handling of control change messages.
         else {
-            var transformedPayload = payload.note !== undefined ? fluid.extend(true, fluid.copy(payload), {note: payload.note + flockquencer.offsets[payload.note] + (that.model.octaveOffset * 12)}) : payload;
-            that.controlOutput.send(transformedPayload);
+            if (that.selectedArpeggiation) {
+                if (notePayload.type === "noteOn" && notePayload.velocity !== 0) {
+                    var selectedPattern  = fluid.get(that.model.sequences, that.selectedArpeggiation);
+                    var firstNote = flockquencer.sequence.getRootNote(selectedPattern);
+                    var arpPattern = fluid.extend(
+                        {},
+                        selectedPattern,
+                        {
+                            status: flockquencer.sequence.status.STOPPING,
+                            noteOffset: notePayload.note - firstNote
+                        }
+                    );
+                    that.sequencePlayer.arpeggiations[notePayload.note] = arpPattern;
+                }
+                else if (notePayload.type === "noteOff" || notePayload.velocity === 0) {
+                    that.sequencePlayer.arpeggiations[notePayload.note].status = flockquencer.sequence.status.STOPPING;
+                }
+            }
+            else {
+                // Just pass the note on to the control output.
+                var transformedPayload = notePayload.note !== undefined ? fluid.extend(true, fluid.copy(notePayload), {note: notePayload.note + flockquencer.offsets[notePayload.note] + (that.model.octaveOffset * 12)}) : notePayload;
+                that.controlOutput.send(transformedPayload);
+            }
         }
     };
 
@@ -86,39 +155,82 @@
     flockquencer.mode.performance.handleModeChange = function (that) {
         if (that.model.mode === that.options.mode) {
             flockquencer.mode.performance.resetNotes(that);
+            that.paintRightColumn();
         }
+    };
+
+    flockquencer.mode.performance.paintRightColumn = function (that) {
+        fluid.each(that.options.sequenceControlNotes, function (isSequence, noteAsString) {
+            // TODO: Clean this up somehow
+            var note = parseInt(noteAsString);
+            var sequence = fluid.get(that.model.sequences, note);
+            if (sequence) {
+                var noteMessage = {
+                    type:     "noteOn",
+                    channel:  0,
+                    note:     note,
+                    velocity: 0
+                };
+
+                if (note === that.selectedArpeggiation) {
+                    noteMessage.velocity = 18;
+                }
+                else if (sequence.status === flockquencer.sequence.status.PLAYING || sequence.status === flockquencer.sequence.status.STARTING) {
+                    noteMessage.velocity = 32;
+                }
+
+                that.uiOutput.send(noteMessage);
+            }
+        });
     };
 
     fluid.defaults("flockquencer.mode.performance", {
         gradeNames: ["flockquencer.mode"],
         mode: "performance",
+        longPressCutoff: 1000, // Time in ms.
+        members: {
+            // Used to distinguish between "short" and "long" presses.
+            controlStartTiming: {
+            },
+            // The id (note) of the current selected arpeggiation.
+            selectedArpeggiation: false
+        },
         model: {
             octaveOffset: -2,
-            mode: "performance"
+            mode: "performance",
+            sequences: {
+                8:   "@expand:flockquencer.sequence.newSequence()",
+                24:  "@expand:flockquencer.sequence.newSequence()",
+                40:  "@expand:flockquencer.sequence.newSequence()",
+                56:  "@expand:flockquencer.sequence.newSequence()",
+                72:  "@expand:flockquencer.sequence.newSequence()",
+                88:  "@expand:flockquencer.sequence.newSequence()",
+                104: "@expand:flockquencer.sequence.newSequence()",
+                120: "@expand:flockquencer.sequence.newSequence()",
+            }
         },
-        controlNotes: {
-            // TODO: Define this better as a means of looking up input handlers for each note.
-            8: {}, 24: {}, 40: {}, 56: {}, 72: {}, 88: {}, 104: {}, 120: {}
+        sequenceControlNotes: {
+            8:   true,
+            24:  true,
+            40:  true,
+            56:  true,
+            72:  true,
+            88:  true,
+            104: true,
+            120: true
         },
-        // TODO: Define this better as we start assembling more modes.
-        //controls: {
-        //    106: 0,
-        //    107: 0,
-        //    // TODO: Move this to another "mode select" mode.
-        //    108: 127
-        //},
         listeners: {
             "note.paintNote": {
                 funcName: "flockquencer.mode.performance.paintNote",
-                args: ["{that}", "{arguments}.0"] // notePayload
+                args:     ["{that}", "{arguments}.0"] // notePayload
             },
-            "note.sendToControlOutput": {
-                funcName: "flockquencer.mode.performance.sendToControlOutput",
-                args: ["{that}", "{arguments}.0"] // notePayload
+            "note.handleNoteInput": {
+                funcName: "flockquencer.mode.performance.handleNoteInput",
+                args:     ["{that}", "{arguments}.0"] // notePayload
             },
             "control.handleControlInput": {
                 funcName: "flockquencer.mode.performance.handleControlInput",
-                args: ["{that}", "{arguments}.0"] // controlPayload
+                args:     ["{that}", "{arguments}.0"] // controlPayload
             },
             "onUiOutputReady.resetNotes": {
                 funcName: "flockquencer.mode.performance.resetNotes",
@@ -128,13 +240,30 @@
         modelListeners: {
             octaveOffset: {
                 excludeSource: "init",
-                funcName: "flockquencer.mode.performance.handleOctaveChange",
-                args: ["{that}"]
+                funcName:      "flockquencer.mode.performance.handleOctaveChange",
+                args:          ["{that}"]
             },
             mode: {
                 excludeSource: "init",
                 funcName:      "flockquencer.mode.performance.handleModeChange",
-                args:         ["{that}"]
+                args:          ["{that}"]
+            }
+        },
+        components: {
+            sequencePlayer: {
+                type: "flockquencer.sequence.player",
+                options: {
+                    model: {
+                        sequences: "{flockquencer.mode.performance}.model.sequences"
+                    }
+                }
+
+            }
+        },
+        invokers: {
+            paintRightColumn: {
+                funcName: "flockquencer.mode.performance.paintRightColumn",
+                args:     ["{that}"]
             }
         }
     });

@@ -20,9 +20,9 @@
                 that.paintItem("note", midiMessage.note, "#aeaeae");
             }
             // On a NoteOn event, send a noteOn to the note in question with a velocity of 12 (off).
-            // TODO: Make a common map of the colours we use so that we can render content from other modes.
             else {
-                that.paintItem("note", midiMessage.note, "yellow");
+                var htmlColour = flockquencer.colours.htmlByVelocity[midiMessage.velocity & 51] || 0; // bitwise AND with 0b0110011
+                that.paintItem("note", midiMessage.note, htmlColour);
             }
         }
     };
@@ -34,7 +34,7 @@
             allElements.css("fill", flockquencer.colours.htmlByVelocity[0]);
         }
         else {
-            var colour = fluid.get(flockquencer.colours.htmlByVelocity, midiMessage.value & 0x0110011) || "#aeaeae";
+            var colour = fluid.get(flockquencer.colours.htmlByVelocity, midiMessage.value & 51) || "#aeaeae"; // bitwise AND with 0b0110011
             that.paintItem("cc", midiMessage.number, colour);
         }
     };
