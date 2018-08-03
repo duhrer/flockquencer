@@ -93,7 +93,7 @@
 
     // An expander to merge partial sequence options with the defaults.
     flockquencer.sequence.mergeWithDefaults = function (sequenceOptions) {
-        fluid.extend({}, flockquencer.sequence.blankSequence, sequenceOptions);
+        return fluid.extend({}, flockquencer.sequence.blankSequence, sequenceOptions);
     };
 
     flockquencer.sequence.getRootNote = function (sequence) {
