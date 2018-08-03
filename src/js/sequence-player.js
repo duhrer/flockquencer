@@ -60,7 +60,7 @@
 
             if (sequence.status === flockquencer.sequence.status.PLAYING || sequence.status === flockquencer.sequence.status.STOPPING) {
                 var stepOffset = sequence.stepOffset || 0;
-                var sequenceOffset = (that.model.beat + stepOffset) % sequence.length;
+                var sequenceOffset = (that.model.beat - stepOffset) % sequence.length;
 
                 // Get the current step.
                 var currentStep = fluid.get(sequence.steps, sequenceOffset);
