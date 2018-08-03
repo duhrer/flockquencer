@@ -23,7 +23,17 @@
         gradeNames: ["fluid.viewComponent"],
         model: {
             mode: "performance",
-            octaveOffset: 0
+            octaveOffset: 0,
+            sequences: {
+                8:   "@expand:flockquencer.sequence.newSequence()",
+                24:  "@expand:flockquencer.sequence.newSequence()",
+                40:  "@expand:flockquencer.sequence.newSequence()",
+                56:  "@expand:flockquencer.sequence.newSequence()",
+                72:  "@expand:flockquencer.sequence.newSequence()",
+                88:  "@expand:flockquencer.sequence.newSequence()",
+                104: "@expand:flockquencer.sequence.newSequence()",
+                120: "@expand:flockquencer.sequence.newSequence()",
+            }
         },
         selectors: {
             controlInput: ".control-input",
@@ -41,6 +51,11 @@
             {
                 record: "{flockquencer.router}.controlOutput",
                 target: "{that flockquencer.mode}.options.components.controlOutput"
+            },
+            // Distribute the control output (note player) to the sequence player if it exists.
+            {
+                record: "{flockquencer.router}.controlOutput",
+                target: "{that flockquencer.sequence.player}.options.components.controlOutput"
             },
             // Distribute the UI output (note painter) to all modes.
             {
@@ -201,7 +216,8 @@
                     model: {
                         mode: "{flockquencer.router}.model.mode",
                         octaveOffset: "{flockquencer.router}.model.octaveOffset",
-                        performanceChannel: "{flockquencer.router}.model.octaveOffset"
+                        performanceChannel: "{flockquencer.router}.model.octaveOffset",
+                        sequences: "{flockquencer.router}.model.sequences"
                     }
                 }
             }

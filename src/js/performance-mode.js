@@ -31,12 +31,12 @@
                 // LONG press on something other than the current arpeggiation pattern, change the pattern.
                 if (pressDuration > that.options.longPressCutoff) {
                     // Stop the sequence if it's playing.
-                    flockquencer.mode.performance.toggleSequenceStatus(sequence, true);
+                    flockquencer.mode.performance.toggleSequenceStatus(that, notePayload.note, true);
                     that.selectedArpeggiation = notePayload.note;
                 }
                 // Short press
                 else {
-                    flockquencer.mode.performance.toggleSequenceStatus(sequence);
+                    flockquencer.mode.performance.toggleSequenceStatus(that, notePayload.note);
                 }
             }
 
@@ -45,7 +45,8 @@
         }
     };
 
-    flockquencer.mode.performance.toggleSequenceStatus = function (sequence, stopOnly) {
+    flockquencer.mode.performance.toggleSequenceStatus = function (that, sequenceId, stopOnly) {
+        var sequence = fluid.copy(that.model.sequences[sequenceId]);
         switch(sequence.status) {
             // Playing, flag it to be stopped.
             case flockquencer.sequence.status.PLAYING:
@@ -68,6 +69,7 @@
                 }
                 break;
         }
+        that.applier.change(["sequences", sequenceId], sequence);
     };
 
     // TODO: BPM controls and display.  Sub-modes?  Other display buffer?
@@ -78,6 +80,7 @@
             flockquencer.mode.performance.toggleSequence(that, notePayload);
         }
         else {
+            var shiftedNote = notePayload.note + flockquencer.offsets[notePayload.note] + (that.model.octaveOffset * 12);
             if (that.selectedArpeggiation) {
                 if (notePayload.type === "noteOn" && notePayload.velocity !== 0) {
                     var selectedPattern  = fluid.get(that.model.sequences, that.selectedArpeggiation);
@@ -86,19 +89,19 @@
                         {},
                         selectedPattern,
                         {
-                            status: flockquencer.sequence.status.STOPPING,
-                            noteOffset: notePayload.note - firstNote
+                            status: flockquencer.sequence.status.STARTING,
+                            noteOffset: shiftedNote - firstNote
                         }
                     );
-                    that.sequencePlayer.arpeggiations[notePayload.note] = arpPattern;
+                    that.sequencePlayer.arpeggiations[shiftedNote] = arpPattern;
                 }
                 else if (notePayload.type === "noteOff" || notePayload.velocity === 0) {
-                    that.sequencePlayer.arpeggiations[notePayload.note].status = flockquencer.sequence.status.STOPPING;
+                    that.sequencePlayer.arpeggiations[shiftedNote].status = flockquencer.sequence.status.STOPPING;
                 }
             }
             else {
                 // Just pass the note on to the control output.
-                var transformedPayload = notePayload.note !== undefined ? fluid.extend(true, fluid.copy(notePayload), {note: notePayload.note + flockquencer.offsets[notePayload.note] + (that.model.octaveOffset * 12)}) : notePayload;
+                var transformedPayload = notePayload.note !== undefined ? fluid.extend(true, fluid.copy(notePayload), {note: shiftedNote}) : notePayload;
                 that.controlOutput.send(transformedPayload);
             }
         }
@@ -198,16 +201,7 @@
         model: {
             octaveOffset: -2,
             mode: "performance",
-            sequences: {
-                8:   "@expand:flockquencer.sequence.newSequence()",
-                24:  "@expand:flockquencer.sequence.newSequence()",
-                40:  "@expand:flockquencer.sequence.newSequence()",
-                56:  "@expand:flockquencer.sequence.newSequence()",
-                72:  "@expand:flockquencer.sequence.newSequence()",
-                88:  "@expand:flockquencer.sequence.newSequence()",
-                104: "@expand:flockquencer.sequence.newSequence()",
-                120: "@expand:flockquencer.sequence.newSequence()",
-            }
+            sequences: {}
         },
         sequenceControlNotes: {
             8:   true,

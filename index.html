@@ -42,7 +42,74 @@
     </div>
 
     <script type="text/javascript">
-        var router = flockquencer.router(".flockquencer");
+        var router = flockquencer.router(".flockquencer", {
+            sequenceTemplates: {
+                8:   {
+                    length: 1,
+                    steps: {
+                        0: {
+                            notes: [88]
+                        }
+                    }
+                },
+                24:  {
+                    length: 2,
+                    steps: {
+                        0: {
+                            notes: [76]
+                        }
+                    }
+                },
+                40:  {
+                    length: 3,
+                    steps: {
+                        0: {
+                            notes: [64]
+                        },
+                        2: {
+                            notes: [64]
+                        }
+                    }
+
+                },
+                56:  {},
+                72:  {},
+                88:  {},
+                104: {},
+                120: {
+                    length: 8,
+                    steps: {
+                        0: {
+                            notes: [50]
+                        },
+                        1: {
+                            tied: true,
+                            notes: [50, 57]
+                        },
+                        2: {
+                            tied: true,
+                            notes: [50, 57, 62]
+                        },
+                        3: {
+                            tied: true,
+                            notes: [50, 57, 62, 65]
+                        }
+                    }
+                }
+            },
+            model: {
+                sequences: {
+                    8:   "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.8)",
+                    24:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.24)",
+                    40:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.40)",
+                    56:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.56)",
+                    72:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.72)",
+                    88:  "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.88)",
+                    104: "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.104)",
+                    120: "@expand:flockquencer.sequence.mergeWithDefaults({that}.options.sequenceTemplates.120)"
+                }
+            }
+        });
     </script>
 </body>
 </html>
