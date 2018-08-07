@@ -12,7 +12,7 @@
         }
     };
 
-    // TODO: Needs to listen to UI output notes rather than control input notes.
+    // TODO: Needs to listen to UI output as well as control input notes.
     flockquencer.onscreen.handleNote = function (that, midiMessage) {
         if (!fluid.get(that, ["options", "controlNotes", midiMessage.note])) {
             // On a NoteOff event, send a noteOn to the note in question with the right colour (velocity).
@@ -63,7 +63,7 @@
             var note = flockquencer.onscreen.extractNote(event.target.getAttribute("class"));
 
             var noteOptions = {
-                type:     "noteOn",
+                type:     mouseEventType === "down" ? "noteOn" : "noteOff",
                 note:     note,
                 velocity: mouseEventType === "down" ? 127 : 0
             };
