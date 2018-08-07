@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Colour Palette Demonstration</title>
+
+    <script src="../node_modules/infusion/dist/infusion-all.js"></script>
+    <script src="../node_modules/flocking/dist/flocking-all.js"></script>
+    <!-- Bergson dependencies -->
+    <script src="../node_modules/bergson/dist/bergson-only.js"></script>
+
+    <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/midi-router.js"></script>
+    <script src="../node_modules/flocking-midi-router/src/ui/browser-router.js"></script>
+    <script src="../src/js/colours.js"></script>
+    <script src="../src/js/mode.js"></script>
+    <script src="../src/js/onscreen-svg.js"></script>
+    <script src="../src/js/onscreen.js"></script>
+    <script src="../src/js/connector.js"></script>
+
+    <script src="./js/colour-router.js"></script>
+</head>
+<body>
+    <p><a href="index.html">Demos</a> > Colour Palette</p>
+
+    <p>Connect your launchpad to this router to see a demonstration of the colour palette.</p>
+
+    <hr/>
+
+    <div class="colour-demo">
+        <div class="flockquencer-onscreen" align="center">
+        </div>
+
+        <div class="ui-output"></div>
+    </div>
+
+    <script type="text/javascript">
+        var colourRouter = flockquencer.demo.colourRouter(".colour-demo");
+    </script>
+</body>
+</html>
