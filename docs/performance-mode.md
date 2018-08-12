@@ -17,6 +17,8 @@ bottom left square bad is a C2, and the upper right is a D#7.
 The up and down arrows act as octave controls, shifting the tuning up or down by two octaves.  The arrows are lit to
 indicate the current offset, as shown here.
 
+The octaves are colour-coded, with the lower-left note in each coloured block representing its C note.
+
 ![Octave Offset Diagram](../src/images/octave-controls.svg)
 
 ## Sequences and Arpeggiation
