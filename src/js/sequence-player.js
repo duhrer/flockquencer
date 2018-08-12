@@ -4,16 +4,18 @@
 
     fluid.registerNamespace("flockquencer.sequence.player");
 
-    flockquencer.sequence.player.refresh = function (that) {
+    flockquencer.sequence.player.init = function (that) {
         that.stop();
 
         that.scheduler.clearAll();
 
         that.scheduler.schedule({
             type: "repeat",
-            freq: that.model.bpm / 60,
+            freq: 1,
             callback: that.processStep
         });
+
+        flockquencer.sequence.player.updateBpm(that);
 
         that.start();
     };
@@ -23,18 +25,22 @@
     };
 
     flockquencer.sequence.player.stop = function (that) {
-        flockquencer.sequence.player.stopScheduler(that);
-    };
-
-    flockquencer.sequence.player.stopScheduler = function (that) {
         // Make sure any lingering arpeggiations don't start playing if we start up later.
         that.stopAllArpeggiations();
 
-        // TODO: we may need to ensure that one last beat is fired to cleanup or otherwise silence any playing notes.
         that.scheduler.stop();
     };
 
+    flockquencer.sequence.player.updateBpm = function (that) {
+        that.currentBpm = that.model.bpm;
+        that.scheduler.setTimeScale(60 / that.currentBpm);
+    };
+
     flockquencer.sequence.player.processStep = function (that) {
+        if (that.currentBpm !== that.model.bpm) {
+            flockquencer.sequence.player.updateBpm(that);
+        }
+
         fluid.each(that.model.sequences, that.handleStepForSequence);
 
         // Process arpeggiations.
@@ -44,17 +50,16 @@
         that.applier.change("beat", that.model.beat + 1);
     };
 
-    flockquencer.sequence.player.handleStepForSequence = function (that, sequence, isArpeggiation) {
+    flockquencer.sequence.player.handleStepForSequence = function (that, sequence, sequenceId, isArpeggiation) {
         if (sequence.status !== flockquencer.sequence.status.STOPPED) {
-
             // Promote any notes waiting to play if the timing is right, i.e. if the current beat is divisible by their length.
             if (sequence.status === flockquencer.sequence.status.STARTING) {
                 if (isArpeggiation) {
-                    sequence.stepOffset = that.model.beat % sequence.length;
-                    sequence.status = flockquencer.sequence.status.PLAYING;
+                    flockquencer.sequence.player.updateSequence(that, sequenceId, sequence, "stepOffset", that.model.beat % sequence.length, isArpeggiation);
+                    flockquencer.sequence.player.updateSequence(that, sequenceId, sequence, "status", flockquencer.sequence.status.PLAYING, isArpeggiation);
                 }
                 else if (that.model.beat % sequence.length === 0) {
-                    sequence.status = flockquencer.sequence.status.PLAYING;
+                    flockquencer.sequence.player.updateSequence(that, sequenceId, sequence, "status", flockquencer.sequence.status.PLAYING, isArpeggiation);
                 }
             }
 
@@ -87,6 +92,7 @@
 
                 // Stop all the old notes
                 fluid.each(notesToStop, function (note) {
+                    // TODO: Standardise this
                     var noteAsInt = parseInt(note, 10);
                     that.controlOutput.send({
                         type: "noteOff",
@@ -110,9 +116,18 @@
 
                 // Now that we've had a chance to silence any last notes, flag a "stopping" sequence as "stopped".
                 if (sequence.status === flockquencer.sequence.status.STOPPING) {
-                    sequence.status = flockquencer.sequence.status.STOPPED;
+                    flockquencer.sequence.player.updateSequence(that, sequenceId, sequence, "status", flockquencer.sequence.status.STOPPED, isArpeggiation);
                 }
             }
+        }
+    };
+
+    flockquencer.sequence.player.updateSequence = function (that, sequenceId, sequence, pathToUpdate, value, isArpeggiation) {
+        if (isArpeggiation) {
+            fluid.set(sequence, pathToUpdate, value);
+        }
+        else {
+            that.applier.change(["sequences", sequenceId, pathToUpdate], value);
         }
     };
 
@@ -168,6 +183,10 @@
         gradeNames: ["fluid.modelComponent"],
         defaultNote: 63,
         members: {
+            // We use model relay to relay changes to the bpm from the user interface, but use a separate mechanism to
+            // update the actual timing.
+            currentBpm: 120,
+            refreshOnNextStep: false,
             arpeggiations: {}
         },
         model: {
@@ -194,19 +213,13 @@
             },
             handleStepForArpeggiation: {
                 funcName: "flockquencer.sequence.player.handleStepForSequence",
-                args:     ["{that}", "{arguments}.0", true]
+                args:     ["{that}", "{arguments}.0", "{arguments}.1", true] // sequence, sequenceId, isArpeggiation
 
             },
             handleStepForSequence: {
                 funcName: "flockquencer.sequence.player.handleStepForSequence",
-                args:     ["{that}", "{arguments}.0"]
-
-            },
-            refresh: {
-                funcName: "flockquencer.sequence.player.refresh",
-                args:     ["{that}"]
+                args:     ["{that}", "{arguments}.0", "{arguments}.1"] // sequence, sequenceId
             }
-
         },
         components: {
             scheduler: {
@@ -226,15 +239,10 @@
                 }
             }
         },
-        modelListeners: {
-            bpm: {
-                func: "{that}.refresh",
-                excludeSource: "init"
-            }
-        },
         listeners: {
             "onCreate.init": {
-                func: "{that}.refresh"
+                funcName: "flockquencer.sequence.player.init",
+                args:     ["{that}"]
             }
         }
 
