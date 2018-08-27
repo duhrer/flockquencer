@@ -52,6 +52,8 @@
 
     flockquencer.sequence.player.handleStepForSequence = function (that, sequence, sequenceId, isArpeggiation) {
         if (sequence.status !== flockquencer.sequence.status.STOPPED) {
+            var midiChannel = sequence.channel || (isArpeggiation ? that.model.performanceChannel : that.model.defaultSequenceChannel);
+
             // Promote any notes waiting to play if the timing is right, i.e. if the current beat is divisible by their length.
             if (sequence.status === flockquencer.sequence.status.STARTING) {
                 if (isArpeggiation) {
@@ -96,6 +98,7 @@
                     var noteAsInt = parseInt(note, 10);
                     that.controlOutput.send({
                         type: "noteOff",
+                        channel: midiChannel,
                         note: noteAsInt + noteOffset,
                         velocity: 0
                     });
@@ -108,6 +111,7 @@
                         var noteAsInt = parseInt(note, 10);
                         that.controlOutput.send({
                             type: "noteOn",
+                            channel: midiChannel,
                             note: noteAsInt + noteOffset,
                             velocity: 100 // TODO: Make this controllable somehow.
                         });
@@ -190,6 +194,8 @@
             arpeggiations: {}
         },
         model: {
+            performanceChannel: 0,
+            defaultSequenceChannel: 2,
             bpm: 120,
             beat: 0,
             sequences: {}
