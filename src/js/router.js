@@ -73,7 +73,7 @@
                 type: "flock.enviro"
             },
             controlInput: {
-                type: "flock.ui.midiConnector",
+                type: "flock.auto.ui.midiConnector",
                 container: "{that}.dom.controlInput",
                 options: {
                     portType: "input",

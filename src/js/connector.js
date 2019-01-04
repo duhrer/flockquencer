@@ -25,8 +25,13 @@
     };
 
     fluid.defaults("flockquencer.connector", {
-        gradeNames: ["flock.ui.midiConnector"],
+        gradeNames: ["flock.auto.ui.midiConnector"],
         portType: "output",
+        preferredDevice: "Launchpad",
+        distributeOptions: {
+            source: "{that}.options.preferredDevice",
+            target: "{that flock.auto.ui.selectBox}.options.preferredDevice"
+        },
         events: {
             note: null,
             noteOn: null,
