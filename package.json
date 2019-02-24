@@ -11,10 +11,9 @@
     "repository": "https://bitbucket.org/duhrer/flockquencer",
     "dependencies": {
         "bergson": "0.13.2",
-        "flocking": "git://github.com/the-t-in-rtf/Flocking.git#0385bcbc5cc21ea7780c2e7f0170e24ae7f71338",
-        "flocking-midi-router": "git://github.com/the-t-in-rtf/flocking-midi-router#618f2e8ae21cbbf146cb16cd94ba94f659a59692",
-        "flocking-midi-select-ng": "1.0.0-dev.20190103T183852Z.f9304f6",
-        "infusion": "3.0.0-dev.20180122T170655Z.350441a9b"
+        "flocking": "2.0.0-dev.20190101T211732Z.efbf6e2",
+        "flocking-midi-select-ng": "1.0.0-dev.20190219T121520Z.893914c",
+        "infusion": "3.0.0-dev.20190212T124747Z.23b4bc89d"
     },
     "devDependencies": {
         "grunt": "1.0.1",

@@ -73,7 +73,7 @@
                 type: "flock.enviro"
             },
             controlInput: {
-                type: "flock.auto.ui.midiConnector",
+                type: "flockquencer.connector",
                 container: "{that}.dom.controlInput",
                 options: {
                     portType: "input",
@@ -135,6 +135,7 @@
                 container: "{that}.dom.controlOutput",
                 options: {
                     portType: "output",
+                    preferredDevice: "None",
                     components: {
                         midiPortSelector: {
                             options: {

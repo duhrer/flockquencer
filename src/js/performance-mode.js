@@ -11,11 +11,12 @@
         if (!isSequenceControl) {
             // Blank playing notes.
             if (notePayload.type === "noteOn") {
-                that.uiOutput.send({ type: "noteOn", velocity: 0, note: notePayload.note });
+                that.uiOutput.send({ type: "noteOn", velocity: 0, note: notePayload.note, channel: 0 });
             }
             // Recolour released notes.
             else {
                 that.uiOutput.send({
+                    channel: 0,
                     type: "noteOn",
                     velocity: flockquencer.colours.velocityByName[that.options.coloursByNote[notePayload.note]],
                     note: notePayload.note
@@ -227,6 +228,7 @@
     flockquencer.mode.performance.paintNotes = function (that) {
         fluid.each(that.options.coloursByNote, function (colourKey, note) {
             that.uiOutput.send({
+                channel:  0,
                 type:     "noteOn",
                 note:     note,
                 velocity: flockquencer.colours.velocityByName[colourKey]
