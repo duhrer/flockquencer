@@ -108,7 +108,7 @@
                     that.sequencePlayer.arpeggiations[shiftedNote] = arpPattern;
                 }
                 else if (notePayload.type === "noteOff" || notePayload.velocity === 0) {
-                    that.sequencePlayer.arpeggiations[shiftedNote].status = flockquencer.sequence.status.STOPPING;
+                    fluid.set(that.sequencePlayer.arpeggiations, [shiftedNote, "status"], flockquencer.sequence.status.STOPPING);
                 }
             }
             else {
